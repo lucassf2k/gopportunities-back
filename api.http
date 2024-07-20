@@ -1,3 +1,39 @@
-GET http://localhost:8080/ping 
+@BASEURL = http://localhost:8080
+@V1 = v1
+
+# @name GetOpening
+GET {{BASEURL}}/api/{{V1}}/opening
+Host: localhost:8080
+Content-Type: application/json
+
+###
+# @name CreateOpening
+POST {{BASEURL}}/api/{{V1}}/opening
+Host: localhost:8080
+Content-Type: application/json
+
+{
+
+}
+
+###
+# @name DeleteOpening
+DELETE {{BASEURL}}/api/{{V1}}/opening
+Host: localhost:8080
+Content-Type: application/json
+
+###
+# @name UpdateOpening
+PUT {{BASEURL}}/api/{{V1}}/opening
+Host: localhost:8080
+Content-Type: application/json
+
+{
+
+}
+
+###
+# @name ListOpenings
+GET {{BASEURL}}/api/{{V1}}/opening
 Host: localhost:8080
 Content-Type: application/json
