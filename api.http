@@ -13,7 +13,12 @@ Host: localhost:8080
 Content-Type: application/json
 
 {
-
+  "role": "Senior da vida e do universo",
+  "company": "Ultrasoft",
+  "location": "Mossoró",
+  "remote": true,
+  "link": "https//vagapica.com",
+  "salary": 52000
 }
 
 ###
