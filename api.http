@@ -39,6 +39,6 @@ Content-Type: application/json
 
 ###
 # @name ListOpenings
-GET {{BASEURL}}/api/{{V1}}/opening
+GET {{BASEURL}}/api/{{V1}}/openings
 Host: localhost:8080
 Content-Type: application/json
