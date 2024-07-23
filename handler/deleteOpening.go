@@ -23,5 +23,17 @@ func DeleteOpeningHandler(ctx *gin.Context) {
 		sendError(ctx, http.StatusInternalServerError, fmt.Sprintf("error deleting opening with id: %s", id))
 		return
 	}
-	sendSucess(ctx, "deleting-opening", opening)
+	openingReponse := schemas.OpeningResponse{
+		ID:        opening.ID,
+		Role:      opening.Role,
+		Company:   opening.Company,
+		Location:  opening.Location,
+		Remote:    opening.Remote,
+		Link:      opening.Link,
+		Salary:    opening.Salary,
+		CreatedAt: opening.CreatedAt,
+		UpdatedAt: opening.UpdatedAt,
+		DeletedAt: opening.DeletedAt.Time,
+	}
+	sendSucess(ctx, "deleting-opening", openingReponse)
 }

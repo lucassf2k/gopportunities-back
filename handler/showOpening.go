@@ -18,5 +18,17 @@ func ShowOpeningHandler(ctx *gin.Context) {
 		sendError(ctx, http.StatusNotFound, "opening not found")
 		return
 	}
-	sendSucess(ctx, "show-opening", opening)
+	openingResponse := schemas.OpeningResponse{
+		ID:        opening.ID,
+		Role:      opening.Role,
+		Company:   opening.Company,
+		Location:  opening.Location,
+		Remote:    opening.Remote,
+		Link:      opening.Link,
+		Salary:    opening.Salary,
+		CreatedAt: opening.CreatedAt,
+		UpdatedAt: opening.UpdatedAt,
+		DeletedAt: opening.DeletedAt.Time,
+	}
+	sendSucess(ctx, "show-opening", openingResponse)
 }

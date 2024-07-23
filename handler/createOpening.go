@@ -28,5 +28,17 @@ func CreateOpeningHandler(ctx *gin.Context) {
 		sendError(ctx, http.StatusInternalServerError, "error creating opening on databse")
 		return
 	}
-	sendSucess(ctx, "Create Opening", opening)
+	openingReponse := schemas.OpeningResponse{
+		ID:        opening.ID,
+		Role:      opening.Role,
+		Company:   opening.Company,
+		Location:  opening.Location,
+		Remote:    opening.Remote,
+		Link:      opening.Link,
+		Salary:    opening.Salary,
+		CreatedAt: opening.CreatedAt,
+		UpdatedAt: opening.UpdatedAt,
+		DeletedAt: opening.DeletedAt.Time,
+	}
+	sendSucess(ctx, "Create Opening", openingReponse)
 }
