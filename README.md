@@ -8,6 +8,13 @@ A simple API for managing job opportunities, developed in Golang using the Gin f
 - Gin (Web Framework)
 - Makefile (Task Automation)
 
+## Use Cases
+
+- Create a Opening
+- Delete a Opening
+- List Openings
+- Update a Opening
+
 ## Endpoints
 
 The API follows the RESTful structure and uses version v1. The default base URL is:
